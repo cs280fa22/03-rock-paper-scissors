@@ -17,30 +17,51 @@
       <h1>Let's play...</h1>
     </div>
     <div class="container my-5">
-      <div class="row  gap-2">
+      <div class="row gap-2">
         <div class="col-sm">
-          <button class="btn btn-primary btn-lg w-100">Rock</button>
+          <button
+            id="rock"
+            onclick="play(event)"
+            class="btn btn-primary btn-lg w-100"
+          >
+            Rock
+          </button>
         </div>
         <div class="col-sm">
-          <button class="btn btn-primary btn-lg w-100">Paper</button>
+          <button
+            id="paper"
+            onclick="play(event)"
+            class="btn btn-primary btn-lg w-100"
+          >
+            Paper
+          </button>
         </div>
-        <div class="col-sm">  
-          <button class="btn btn-primary btn-lg w-100">Scissors</button>
+        <div class="col-sm">
+          <button
+            id="scissors"
+            onclick="play(event)"
+            class="btn btn-primary btn-lg w-100"
+          >
+            Scissors
+          </button>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Draw!</h5>
-          <div>You selected scissors!<br/>The computer chose scissors!</div>
+          <h5 id="result" class="card-title">Draw!</h5>
+          <div id="message">
+            You selected scissors!<br />The computer chose scissors!
+          </div>
         </div>
       </div>
-    </div> 
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
