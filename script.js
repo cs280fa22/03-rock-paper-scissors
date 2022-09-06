@@ -1,26 +1,29 @@
+const result = document.getElementById("result");
+const message = document.getElementById("message");
+
 const choices = ["rock", "paper", "scissors"];
 
-function play (event) {
+function play(event) {
   const userChoice = event.target.id;
-  console.log("user choice is", userChoice);
+  message.innerHTML = "You selected " + userChoice + "!" + "<br/>";
 
   const randomNumber = Math.floor(Math.random() * choices.length);
   const computerChoice = choices[randomNumber];
-  console.log("computer choice is", computerChoice);
+  message.innerHTML += "The computer chose " + computerChoice + "!";
 
   if (computerChoice === userChoice) {
-    console.log("Draw!");
+    result.innerHTML = "Draw!";
   } else if (computerChoice === "rock" && userChoice === "paper") {
-    console.log("You win!");
+    result.innerHTML = "You win!";
   } else if (computerChoice === "rock" && userChoice === "scissors") {
-    console.log("You lost!");
+    result.innerHTML = "You lost!";
   } else if (computerChoice === "paper" && userChoice === "scissors") {
-    console.log("You win!");
+    result.innerHTML = "You win!";
   } else if (computerChoice === "paper" && userChoice === "rock") {
-    console.log("You lose!");
+    result.innerHTML = "You lose!";
   } else if (computerChoice === "scissors" && userChoice === "rock") {
-    console.log("You win!");
+    result.innerHTML = "You win!";
   } else if (computerChoice === "scissors" && userChoice === "paper") {
-    console.log("You lose!");
-  }  
+    result.innerHTML = "You lose!";
+  }
 }
